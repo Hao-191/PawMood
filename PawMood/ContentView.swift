@@ -13,7 +13,10 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("PawMood")
+            Text("Firebase should be working if you see no errors in console")
+                            .font(.subheadline)
+                            .padding()
         }
         .padding()
     }

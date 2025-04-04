@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EBFA6C7E2D9F89EA000A7AFA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6C7D2D9F89EA000A7AFA /* FirebaseAnalytics */; };
+		EBFA6C802D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6C7F2D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		EBFA6C4D2D9F6C8C000A7AFA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBFA6C7E2D9F89EA000A7AFA /* FirebaseAnalytics in Frameworks */,
+				EBFA6C802D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = PawMood;
 			packageProductDependencies = (
+				EBFA6C7D2D9F89EA000A7AFA /* FirebaseAnalytics */,
+				EBFA6C7F2D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = PawMood;
 			productReference = EBFA6C3E2D9F6C8C000A7AFA /* PawMood.app */;
@@ -195,6 +204,9 @@
 			);
 			mainGroup = EBFA6C352D9F6C8C000A7AFA;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EBFA6C3F2D9F6C8C000A7AFA /* Products */;
 			projectDirPath = "";
@@ -408,7 +420,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PawMood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hci.PawMood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -445,7 +457,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.PawMood;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hci.PawMood;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -583,6 +595,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBFA6C7D2D9F89EA000A7AFA /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EBFA6C7F2D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBFA6C362D9F6C8C000A7AFA /* Project object */;
 }
