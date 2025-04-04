@@ -13,7 +13,7 @@ struct PawMoodApp: App {
     // Initialize Firebase as soon as the app launches
         init() {
             // Skip Firebase config in preview mode
-                    if ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != "1" {
+                    if !PreviewHelper.isPreview { // take preview helper to avoid firebase bug
                         FirebaseApp.configure()
                         print("Firebase configured")
                     } else {

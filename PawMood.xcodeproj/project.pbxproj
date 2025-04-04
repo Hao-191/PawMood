@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EBFA6C7E2D9F89EA000A7AFA /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6C7D2D9F89EA000A7AFA /* FirebaseAnalytics */; };
-		EBFA6C802D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6C7F2D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		EBFA6D252DA0644D000A7AFA /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6D242DA0644D000A7AFA /* FirebaseCore */; };
+		EBFA6D2E2DA06629000A7AFA /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6D2D2DA06629000A7AFA /* FirebaseFirestore */; };
+		EBFA6D302DA06642000A7AFA /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6D2F2DA06642000A7AFA /* FirebaseAppCheck */; };
+		EBFA6D322DA06C55000A7AFA /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6D312DA06C55000A7AFA /* FirebaseAuth */; };
+		EBFA6D3A2DA06D86000A7AFA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = EBFA6D392DA06D86000A7AFA /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBFA6C7E2D9F89EA000A7AFA /* FirebaseAnalytics in Frameworks */,
-				EBFA6C802D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				EBFA6D252DA0644D000A7AFA /* FirebaseCore in Frameworks */,
+				EBFA6D302DA06642000A7AFA /* FirebaseAppCheck in Frameworks */,
+				EBFA6D2E2DA06629000A7AFA /* FirebaseFirestore in Frameworks */,
+				EBFA6D3A2DA06D86000A7AFA /* FirebaseStorage in Frameworks */,
+				EBFA6D322DA06C55000A7AFA /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,7 @@
 				EBFA6C402D9F6C8C000A7AFA /* PawMood */,
 				EBFA6C4F2D9F6C8C000A7AFA /* PawMoodTests */,
 				EBFA6C592D9F6C8C000A7AFA /* PawMoodUITests */,
+				EBFA6D2C2DA06629000A7AFA /* Frameworks */,
 				EBFA6C3F2D9F6C8C000A7AFA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +104,13 @@
 				EBFA6C562D9F6C8C000A7AFA /* PawMoodUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EBFA6D2C2DA06629000A7AFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,8 +133,11 @@
 			);
 			name = PawMood;
 			packageProductDependencies = (
-				EBFA6C7D2D9F89EA000A7AFA /* FirebaseAnalytics */,
-				EBFA6C7F2D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport */,
+				EBFA6D242DA0644D000A7AFA /* FirebaseCore */,
+				EBFA6D2D2DA06629000A7AFA /* FirebaseFirestore */,
+				EBFA6D2F2DA06642000A7AFA /* FirebaseAppCheck */,
+				EBFA6D312DA06C55000A7AFA /* FirebaseAuth */,
+				EBFA6D392DA06D86000A7AFA /* FirebaseStorage */,
 			);
 			productName = PawMood;
 			productReference = EBFA6C3E2D9F6C8C000A7AFA /* PawMood.app */;
@@ -205,7 +222,7 @@
 			mainGroup = EBFA6C352D9F6C8C000A7AFA;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EBFA6C3F2D9F6C8C000A7AFA /* Products */;
@@ -415,7 +432,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -424,10 +441,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,7";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Debug;
@@ -452,7 +470,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
@@ -461,10 +479,11 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,7";
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
 			name = Release;
@@ -482,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PawMoodTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
@@ -504,7 +523,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.PawMoodTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
@@ -519,16 +538,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PawMoodUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = PawMood;
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
@@ -540,16 +559,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MACOSX_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PawMoodUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = PawMood;
 				XROS_DEPLOYMENT_TARGET = 2.4;
 			};
@@ -597,7 +616,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -608,15 +627,30 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EBFA6C7D2D9F89EA000A7AFA /* FirebaseAnalytics */ = {
+		EBFA6D242DA0644D000A7AFA /* FirebaseCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
+			package = EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
-		EBFA6C7F2D9F89EA000A7AFA /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+		EBFA6D2D2DA06629000A7AFA /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EBFA6C7C2D9F89EA000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
+			package = EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		EBFA6D2F2DA06642000A7AFA /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		EBFA6D312DA06C55000A7AFA /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EBFA6D392DA06D86000A7AFA /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBFA6D232DA0644D000A7AFA /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
