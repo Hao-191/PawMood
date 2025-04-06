@@ -23,7 +23,8 @@ struct PawMoodApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            MainTabView()
         }
     }
 }

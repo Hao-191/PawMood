@@ -5,9 +5,16 @@
 //  Created by WPH on 2025/4/3.
 //
 
+
+
 import SwiftUI
 
 struct ContentView: View {
+    
+    // this ContentView is just for swiftUI and firebase connect test.
+    // the real app view is using the MainTabView.swift
+    
+    
     @State private var status: String = "Ready to upload"
     let sampleImageURL = 
     "https://firebasestorage.googleapis.com/v0/b/pawmood-7be18.firebasestorage.app/o/sample_dog.jpg?alt=media&token=2f4a0c7b-ec25-4f7a-821c-54487cbd5f39"
