@@ -13,19 +13,21 @@ struct MoodView: View {
     let happy = MockMoodStats.happy
     let receptive = MockMoodStats.receptive
     
+    @EnvironmentObject var tabRouter: TabRouter
     @State private var navigateToScan = false
+    @State private var showAnalysisSheet = false
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack(alignment: .leading, spacing: 20) {
+                VStack(spacing: 20) {
                     // Header
                     Text("PawMood")
                         .font(.largeTitle.bold())
+                        .fontDesign(.serif)
                         .padding(.top)
                     
                     // Sniff My Mood Card
-                    // tappable sniff card
                     Button {
                         navigateToScan = true
                     } label: {
@@ -60,12 +62,19 @@ struct MoodView: View {
                 .padding()
             }
             .navigationDestination(isPresented: $navigateToScan) {
-                ScanView()
+                ScanView(navigateToScan: $navigateToScan, showAnalysisSheet: $showAnalysisSheet)
+            }
+            .sheet(isPresented: $showAnalysisSheet) {
+                AnalysisView(showAnalysisSheet: $showAnalysisSheet) {
+//                    showAnalysisSheet = false
+                    tabRouter.selectedIndex = 1
+                }
+                .environmentObject(tabRouter)
             }
         }
     }
 }
 
-#Preview {
-    MoodView()
-}
+//#Preview {
+//    MoodView()
+//}

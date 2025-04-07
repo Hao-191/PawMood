@@ -15,7 +15,7 @@ enum Tab {
 }
 
 struct TabToolBarView: View {
-    let tabIcons = ["house", "chart.bar", "bubble.left", "person"]
+    let tabIcons = ["house.fill", "bubble.left.fill", "chart.bar.fill", "person.fill"]
     @Binding var selectedIndex: Int
 
     var body: some View {

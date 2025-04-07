@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct MainTabView: View {
-    @State private var selectedIndex = 0
-
+    // tab router for 
+    @StateObject private var tabRouter = TabRouter()
+    
     var body: some View {
         NavigationStack {
             BaseView {
                 VStack(spacing: 0) {
                     Group {
-                        switch selectedIndex {
+                        switch tabRouter.selectedIndex {
                         case 0: MoodView()
                         case 1: ChatView()
                         case 2: HistoryView()
@@ -23,14 +24,17 @@ struct MainTabView: View {
                         default: MoodView()
                         }
                     }
-                    TabToolBarView(selectedIndex: $selectedIndex)
-                }
+                    if tabRouter.selectedIndex != 1 {
+                        TabToolBarView(selectedIndex: $tabRouter.selectedIndex)
+                    }
+                }.id(tabRouter.selectedIndex)
             }
         }
+        .environmentObject(tabRouter)
     }
 }
 
 #Preview {
-    MainTabView()
+    MainTabView().environmentObject(TabRouter())
 }
 

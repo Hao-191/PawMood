@@ -25,6 +25,8 @@ extension Color {
 
 struct GlobalColors {
     static let background = Color(hex: "#D4F2F4")
+    static let darkBlue = Color(hex: "#005A9C")
+    static let lightBlue = Color(hex: "#8EDDFF")
     static let tabBar = Color(hex: "#D9F3F2")
     static let activeIcon = Color.blue
     static let inactiveIcon = Color.gray

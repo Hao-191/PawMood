@@ -24,7 +24,7 @@ struct PawMoodApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            MainTabView()
+            MainTabView().environmentObject(TabRouter())
         }
     }
 }
