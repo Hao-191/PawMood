@@ -9,10 +9,17 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        VStack{
-            Spacer()
-            Text("Profile Page")
-            Spacer()
-        }
+            VStack(spacing: 24) {
+                // Greeting & Image Header
+                ProfileHeader()
+
+                // User Card
+                UserCard()
+
+                // Tabs: Footprint / Favorite Dogs
+                ProfileTabs()
+            }
+            .padding()
     }
 }
+

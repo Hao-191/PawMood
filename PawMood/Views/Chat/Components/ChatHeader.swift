@@ -14,6 +14,7 @@ struct ChatHeader: View {
             .frame(maxWidth: .infinity)
             .fontDesign(.serif)
             .padding(.bottom)
+            .padding(.top)
     }
 }
 

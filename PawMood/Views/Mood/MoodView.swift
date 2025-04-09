@@ -19,14 +19,10 @@ struct MoodView: View {
     
     var body: some View {
         NavigationStack {
+            // Header
+            MoodHeader()
             ScrollView {
                 VStack(spacing: 20) {
-                    // Header
-                    Text("PawMood")
-                        .font(.largeTitle.bold())
-                        .fontDesign(.serif)
-                        .padding(.top)
-                    
                     // Sniff My Mood Card
                     Button {
                         navigateToScan = true
@@ -45,12 +41,13 @@ struct MoodView: View {
                         Spacer()
                         Button("See All") {
                             // navigate or action
+                            tabRouter.selectedIndex = 2
                         }
                         .font(.subheadline)
                     }
                     
                     VStack(spacing: 12) {
-                        ForEach(moodEntries) { entry in
+                        ForEach(moodEntries.prefix(5)) { entry in
                             MoodHistoryRow(
                                 time: entry.time,
                                 breed: entry.breed,

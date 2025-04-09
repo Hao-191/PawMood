@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import GoogleMaps
 
 @main
 struct PawMoodApp: App {
@@ -15,7 +16,8 @@ struct PawMoodApp: App {
             // Skip Firebase config in preview mode
                     if !PreviewHelper.isPreview { // take preview helper to avoid firebase bug
                         FirebaseApp.configure()
-                        print("Firebase configured")
+                        GMSServices.provideAPIKey("AIzaSyCOcC8IJfS9mtOCr1IpZ6D2ZEbwVqQxndA")
+                        print("Firebase & Google Maps configured")
                     } else {
                         print("Preview mode: Firebase skipped")
                     }

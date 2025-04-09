@@ -7,8 +7,9 @@
 
 import SwiftUI
 import Foundation
+import CoreLocation
 
-// For MoodView 
+// For MoodView
 struct MoodEntry: Identifiable {
     let id = UUID()
     let time: String
@@ -37,4 +38,30 @@ struct ChatMessage: Identifiable {
     let message: String
     let timestamp: String
 }
+
+// For ProfileView Footprint list
+struct Footprint: Identifiable {
+    let id = UUID()
+    let location: String
+    let detail: String
+    let icons: [String]
+}
+
+// For MoodTrendView points
+struct CuddleData: Identifiable, Equatable {
+    let id = UUID()
+    let dateLabel: String // e.g. "3.1", "3.8", etc.
+    let count: Int
+}
+
+
+// For HistoryView GMap Locations
+struct CuddleLocation: Identifiable {
+    let id = UUID()
+    let coordinate: CLLocationCoordinate2D
+    let title: String
+    let snippet: String
+}
+
+
 
