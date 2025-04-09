@@ -37,7 +37,7 @@ struct HistoryView: View {
                         
                         HStack {
                             Spacer()
-                            Text("Drag to view your cuddling map")
+                            Text("Tap to view your cuddling map")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                             Spacer()
